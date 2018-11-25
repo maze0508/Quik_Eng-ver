@@ -1,0 +1,64 @@
+<Loadfile>
+  <User ID="" name="" level="" money="100">
+    <current_icon icon="" />
+    <compete>
+      <enemy />
+    </compete>
+    <learningtask star_all_count="0" listen_all_count="0" speak_all_count="0" state_count="1">
+      <task1 time="" star="0" listen_count_learn="0" listen_count_practice="0" speak_count="0" state="1" />
+    </learningtask>
+    <practice_move_progress>
+      <task1 move_count_practice="0" />
+      <task2 move_count_practice="0" />
+      <task3 move_count_practice="0" />
+    </practice_move_progress>
+    <practice_speak_progress>
+      <task1 speak_count_practice="0" />
+      <task2 speak_count_practice="0" />
+      <task3 speak_count_practice="0" />
+    </practice_speak_progress>
+    <challenge_progress>
+      <challengeticket count="1" use="0" />
+      <task1 challenge_count="0" state="0" hight_score="0" />
+      <task2 challenge_count="0" state="0" hight_score="0" />
+      <task3 challenge_count="0" state="0" hight_score="0" />
+    </challenge_progress>
+  </User>
+  <goods_item count="0">
+    <baby price="2400" state="0" time="" />
+    <glass price="400" state="0" time="" />
+    <guitar price="500" state="0" time="" />
+  </goods_item>
+  <buy_list />
+  <show_list />
+  <log_record>
+    <time_history>
+      <time_history_day day="2018-05-26">
+        <time_history_record scence="login" startTime="23:02:50" duration="" />
+      </time_history_day>
+    </time_history>
+    <touch>
+      <touch_space count="0" />
+      <touch_rank count="0" />
+      <touch_shop count="0" />
+      <touch_learningtask count="0">
+        <touch_task1 count="0" />
+        <touch_task2 count="0" />
+        <touch_task3 count="0" />
+      </touch_learningtask>
+      <touch_reward count="0">
+        <touch_reward_badge count="0">
+          <touch_badge_learn count="0" />
+          <touch_badge_listen count="0" />
+          <touch_badge_speak count="0" />
+          <touch_badge_unlock count="0" />
+          <touch_badge_challengecard count="0" />
+          <touch_badge_shop count="0" />
+        </touch_reward_badge>
+        <touch_reward_listen count="0" />
+        <touch_reward_speak count="0" />
+      </touch_reward>
+      <touch_ali count="0" />
+    </touch>
+  </log_record>
+</Loadfile>
