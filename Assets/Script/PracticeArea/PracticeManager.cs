@@ -5,7 +5,7 @@ using System.Net;
 using UnityEngine;
 
 public class PracticeManager {
-    private string serverlink = "http://140.115.126.137/Quik_E/";
+    private string serverlink = "http://140.115.126.167/Quik_E/";
     HttpWebRequest request;
     Xmlprocess xmlprocess;
     public Dictionary<int, string> E_vocabularyDic = new Dictionary<int, string>();//key=單字ID,val=英文單字

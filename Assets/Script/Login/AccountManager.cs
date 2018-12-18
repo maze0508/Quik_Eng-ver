@@ -6,7 +6,7 @@ using System;
 
 public class AccountManager {
 
-    private string serverlink = "http://140.115.126.137/Quik_E/";
+    private string serverlink = "http://140.115.126.167/Quik_E/";
     string s_checksum;
     public int state;
     public string s_state;
@@ -41,8 +41,8 @@ public class AccountManager {
              {
                  AccountInfo = reg.text.Split(',');
                  state = 1;
-                 xmlprocess = new Xmlprocess(AccountInfo[0]);
-                 xmlprocess.setUserInfo(AccountInfo);//ID,pwd,level,sex
+                 xmlprocess = new Xmlprocess(AccountInfo[0], AccountInfo);
+                 //xmlprocess.setUserInfo(AccountInfo);//ID,pwd,level,sex
                  xmlprocess.ScceneHistoryRecord("Login", DateTime.Now.ToString("HH:mm:ss"));
              }
            /* else {
@@ -73,8 +73,8 @@ public class AccountManager {
                 AccountInfo = new string[]{str[0],str[2],"1", str[3] };
                 state = 0;//帳號不重複
                 Debug.Log(state+" "+ AccountInfo);
-                xmlprocess = new Xmlprocess(AccountInfo[0]);
-                xmlprocess.setUserInfo(AccountInfo);//將註冊資訊傳至XmlNode
+                xmlprocess = new Xmlprocess(AccountInfo[0], AccountInfo);
+                //xmlprocess.setUserInfo(AccountInfo);//將註冊資訊傳至XmlNode
                 //xmlprocess.timeHistoryRecord("Register");
                 xmlprocess.ScceneHistoryRecord("Register", DateTime.Now.ToString("HH:mm:ss"));
 

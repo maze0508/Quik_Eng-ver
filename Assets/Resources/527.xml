@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Loadfile>
-  <User ID="527" name="527" level="1" sex="1">
+  <User ID="527" name="527" level="3" sex="1">
     <badge learning_count="0" compete_count="0" />
-    <learning review_count="2" learning_count="1" learning_correct="5" learning_wrong="15" learning_improve="1" highscore="24" />
+    <learning review_count="1" learning_count="2" learning_correct="51" learning_wrong="9" learning_improve="1" highscore="427" />
     <compete compete_count="0" compete_correct="0" compete_wrong="0" compete_improve="0" highscore="0" />
   </User>
   <badge_record>
-    <badge_learning count="1">
+    <badge_learning count="2">
       <badge1 level="1" />
-      <badge2 level="0" />
+      <badge2 level="3" />
       <badge3 level="0" />
-      <badge4 level="0" />
-      <badge5 level="0" />
+      <badge4 level="2" />
+      <badge5 level="1" />
     </badge_learning>
-    <badge_compete count="0">
+    <badge_compete count="1">
       <badge6 level="0" />
       <badge7 level="0" />
       <badge8 level="0" />
@@ -27,73 +27,23 @@
     <rank_record highscore="" rank="" updateTime="" />
   </rank_history>
   <touch_history>
-    <touch_achieve showcount="11" clickcount="2" />
+    <touch_achieve showcount="3" clickcount="0" />
   </touch_history>
-  <log_record day="2018-11-22">
+  <log_record day="2018-12-18">
     <learning_history>
-      <learning_record startTime="14: 36:09" option_score="0" cloze_score="0" score="0" correct="0" maxcorrect="0" endTime="" />
-      <learning_record startTime="14: 36:09" option_score="0" cloze_score="0" score="0" correct="0" maxcorrect="0" endTime="" />
-      <learning_record startTime="14: 38:49" option_score="0" cloze_score="0" score="0" correct="0" maxcorrect="0" endTime="" />
-      <learning_record startTime="14: 39:14" option_score="0" cloze_score="0" score="0" correct="0" maxcorrect="0" endTime="" />
-      <learning_record startTime="14: 48:05" option_score="24" cloze_score="0" score="24" correct="5" maxcorrect="2" endTime="14: 48:50" />
+      <learning_record startTime="15: 29:43" option_score="21" cloze_score="406" score="427" correct="20" maxcorrect="-1" endTime="15: 31:22" />
+      <learning_record startTime="15: 37:15" option_score="17" cloze_score="25" score="42" correct="11" maxcorrect="8" endTime="15: 38:19" />
     </learning_history>
     <compete_history />
     <scene_history>
-      <scene_record scene="Login" startTime="12:50:59" />
-      <scene_record scene="Compete" startTime="12:51:02" />
-      <scene_record scene="Login" startTime="12:52:35" />
-      <scene_record scene="Compete" startTime="12:52:37" />
-      <scene_record scene="Login" startTime="12:53:30" />
-      <scene_record scene="Compete" startTime="12:53:33" />
-      <scene_record scene="Login" startTime="13:11:28" />
-      <scene_record scene="Compete" startTime="13:11:31" />
-      <scene_record scene="Login" startTime="13:12:58" />
-      <scene_record scene="Compete" startTime="13:13:00" />
-      <scene_record scene="Login" startTime="13:27:23" />
-      <scene_record scene="Compete" startTime="13:27:25" />
-      <scene_record scene="Login" startTime="13:38:02" />
-      <scene_record scene="Compete" startTime="13:38:04" />
-      <scene_record scene="Login" startTime="13:54:28" />
-      <scene_record scene="Login" startTime="14:23:34" />
-      <scene_record scene="Learning" startTime="14:23:55" />
-      <scene_record scene="Login" startTime="14:26:42" />
-      <scene_record scene="Login" startTime="14:32:06" />
-      <scene_record scene="Login" startTime="14:32:58" />
-      <scene_record scene="Login" startTime="14:35:01" />
-      <scene_record scene="Learning" startTime="14:35:57" />
-      <scene_record scene="Login" startTime="14:38:42" />
-      <scene_record scene="Learning" startTime="14:38:45" />
-      <scene_record scene="Login" startTime="14:39:11" />
-      <scene_record scene="Learning" startTime="14:39:13" />
-      <scene_record scene="Login" startTime="14:41:01" />
-      <scene_record scene="Learning" startTime="14:41:04" />
-      <scene_record scene="Login" startTime="14:42:10" />
-      <scene_record scene="Learning" startTime="14:42:13" />
-      <scene_record scene="Login" startTime="14:47:50" />
-      <scene_record scene="Learning" startTime="14:47:55" />
-      <scene_record scene="Compete" startTime="14:48:55" />
-      <scene_record scene="WaitingCompete" startTime="14:49:11" />
-      <scene_record scene="Compete" startTime="14:49:22" />
-      <scene_record scene="Compete" startTime="14:49:34" />
-      <scene_record scene="Compete" startTime="14:49:41" />
-      <scene_record scene="WaitingCompete" startTime="14:50:48" />
-      <scene_record scene="Compete" startTime="14:51:29" />
-      <scene_record scene="Login" startTime="14:51:39" />
-      <scene_record scene="Compete" startTime="14:51:42" />
-      <scene_record scene="Login" startTime="14:52:03" />
-      <scene_record scene="Compete" startTime="14:52:10" />
-      <scene_record scene="Login" startTime="14:53:41" />
-      <scene_record scene="Compete" startTime="14:53:44" />
-      <scene_record scene="Login" startTime="15:35:30" />
-      <scene_record scene="Compete" startTime="15:35:32" />
-      <scene_record scene="WaitingCompete" startTime="15:36:14" />
-      <scene_record scene="WaitingCompete" startTime="15:36:22" />
-      <scene_record scene="Login" startTime="16:57:34" />
-      <scene_record scene="Learning" startTime="16:57:38" />
-      <scene_record scene="Login" startTime="17:33:53" />
-      <scene_record scene="Login" startTime="17:35:52" />
-      <scene_record scene="Login" startTime="23:54:45" />
-      <scene_record scene="Login" startTime="23:59:31" />
+      <scene_record scene="Login" startTime="15:29:31" />
+      <scene_record scene="Learning" startTime="15:29:39" />
+      <scene_record scene="Login" startTime="15:32:07" />
+      <scene_record scene="Login" startTime="15:37:10" />
+      <scene_record scene="Learning" startTime="15:37:14" />
+      <scene_record scene="Login" startTime="15:42:41" />
+      <scene_record scene="Compete" startTime="15:42:55" />
+      <scene_record scene="WaitingCompete" startTime="15:42:57" />
     </scene_history>
   </log_record>
 </Loadfile>

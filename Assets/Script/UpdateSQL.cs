@@ -17,13 +17,13 @@ public class UpdateSQL : MonoBehaviour {
     MySQLAccess mySQLAccess;
     public XmlDocument xmlDoc;
 
-    //private string serverlink = "http://140.115.126.137/microbe/uploadData.php";
+    //private string serverlink = "http://140.115.126.167/microbe/uploadData.php";
 
 
     public int stateBG;
     static string host = "140.115.126.167";
-    static string id = "ani";
-    static string pwd = "123";
+    static string id = "maze";
+    static string pwd = "106524006";
     static string database = "quik_ani";
     public static string result = "";
 

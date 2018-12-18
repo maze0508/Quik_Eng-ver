@@ -17,8 +17,8 @@ public class Achievement : MonoBehaviour {
     string [,] badgeDesciption;
 
     Xmlprocess xmlprocess;
-    private string serverlink = "http://140.115.126.137/Quik_E/";
-    private string fileName = "getBadgeDescription";
+    private string serverlink = "http://140.115.126.167/Quik_E/";
+    private string fileName = "getBadgeDescription.php";
 
     private int[] _targetLevel;//存取X區所有獎章的階段
     private Button[] _badgeBtn;//存取X區所有獎章按鈕物件

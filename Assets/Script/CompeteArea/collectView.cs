@@ -62,6 +62,7 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
         hintLA_count = 10000; hintST_count = 10000;
         c_hintLA_count = 0; c_hintST_count = 0;
         wrongNum = 0;
+        IsShowingResults = false;
         RefreshConnectUI();
 
     }
@@ -207,9 +208,8 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
         this.question.text = "";
         this.localSelection = "";
         this.remoteSelection = "";
-        IsShowingResults = false;
-
     }
+
     public IEnumerator initialTurn()//回合初始化
     {
         yield return new WaitForSeconds(1f);
@@ -237,7 +237,7 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
 
         timerflag = true;
         TurnStartTime = DateTime.Now;
-
+        IsShowingResults = false;
     }
 
     //建立卡牌
@@ -293,6 +293,8 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
                 }
             }
         }
+        IsShowingResults = true ;
+
     }
 
     //作答耗費的時間
@@ -399,15 +401,15 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
         switch (this.result)
         {
             case ResultType.CorrectAns:
-                PhotonNetwork.player.AddScore((int)(restTime * 0.8+ local.GetScore() * 0.2 - (_hintLA * 1) - (_hintST *3)+ (PhotonNetwork.room.PlayerCount * 0.25) ));//剩餘時間*0.8+原本分數*0.2-使用提示+房間人數*0.5
+                PhotonNetwork.player.AddScore((int)(restTime * 0.8+ local.GetScore() * 0.2 - (_hintLA * 1) - (_hintST *1.5)+ (PhotonNetwork.room.PlayerCount * 0.25) ));//剩餘時間*0.8+原本分數*0.2-使用提示+房間人數*0.5
                 resultState = "correct";
                 break;
             case ResultType.None:
-                PhotonNetwork.player.AddScore(-5);
+                PhotonNetwork.player.AddScore(-4);
                 resultState = "none";
                 break;
             case ResultType.WrongAns:
-                PhotonNetwork.player.AddScore(-2);
+                PhotonNetwork.player.AddScore(-1);
                 resultState = "wrong";
                 break;
         }
@@ -466,7 +468,7 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
     }
 
     void RefreshWaitUI() {
-        if (PhotonNetwork.room.PlayerCount <= 5)
+        if (PhotonNetwork.room.PlayerCount <= 4)
         {
             if (PhotonNetwork.isMasterClient)
             {
@@ -487,7 +489,7 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
         HostInfo.GetComponentsInChildren<Text>()[0].text = hostPlayer.NickName;
 
         //Initialize players'name
-        for (int i = 1; i < 5; i++)
+        for (int i = 1; i < 4; i++)
         {
             GameObject PlayerInfo = GameObject.FindGameObjectWithTag("Player" + i);
             PlayerInfo.GetComponentsInChildren<Text>()[0].text = "";
@@ -578,9 +580,12 @@ public class collectView : PunBehaviour, IPunTurnManagerCallbacks
     public void ClickGameStart()
     {
         ClickBtn.Play();
-        if (PhotonNetwork.room.PlayerCount > 1)
+        //if (PhotonNetwork.room.PlayerCount== 4)
+        if (PhotonNetwork.room.PlayerCount >= 2 && PhotonNetwork.room.PlayerCount <= 4)
         {
-
+            PhotonNetwork.room.IsOpen = false;
+            PhotonNetwork.room.IsVisible = false;
+            Debug.Log("Gamestart.");
             this.photonView.RPC("GameStart", PhotonTargets.All);
         }
         else

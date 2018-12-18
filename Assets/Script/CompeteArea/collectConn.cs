@@ -16,12 +16,13 @@ public class collectConn : PunBehaviour
     AudioSource ClickBtn;
 
     public static string[] ques, option;
-    private string serverlink = "http://140.115.126.137/Quik_E/";
+    private string serverlink = "http://140.115.126.167/Quik_E/";
     string UserID;
-    string previousRoomPlayerPrefKey = null;
+    string previousRoomPlayerPrefKey = "PUN:Demo:RPS:PreviousRoom";
     ///
     public string previousRoom;
-    const string NickNamePlayerPrefsKey = "";
+    private const string MainSceneName = "Home";
+    const string NickNamePlayerPrefsKey = "NickName";
     Xmlprocess xmlprocess;
 
     void Start () {
@@ -92,7 +93,7 @@ public class collectConn : PunBehaviour
 
         WWWForm phpform = new WWWForm();
         phpform.AddField("action", "getQuestion");
-        WWW reg = new WWW(serverlink + "getQuestion", phpform);
+        WWW reg = new WWW(serverlink + "getQuestion.php", phpform);
         yield return reg;
         if (reg.error == null)
         {
@@ -110,7 +111,7 @@ public class collectConn : PunBehaviour
 
         WWWForm phpform = new WWWForm();
         phpform.AddField("action", "getOption");
-        WWW reg = new WWW(serverlink + "getOption", phpform);
+        WWW reg = new WWW(serverlink + "getOption.php", phpform);
         yield return reg;
         if (reg.error == null)
         {
@@ -145,7 +146,7 @@ public class collectConn : PunBehaviour
         }
         else
         {
-            PhotonNetwork.JoinRandomRoom();//隨機加入房間
+            PhotonNetwork.JoinRandomRoom();
         }
     }
 
@@ -168,7 +169,7 @@ public class collectConn : PunBehaviour
     public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)//如果沒有其他房間可以加入，則創建房間
     {
         Debug.Log("CreateRoom");
-        PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 5, PlayerTtl = 15000 }, null);
+        PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 4}, null);
     }
 
 
